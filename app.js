@@ -1,7 +1,7 @@
 let gameboard = [
-    ['_', '_', '_',],
-    ['_', '_', '_',],
-    ['_', '_', '_',]
+    ['_', '_', '_'],
+    ['_', '_', '_'],
+    ['_', '_', '_']
 ]
 
 const winningsSums = [7, 56, 73, 84, 146, 273, 292, 448]
@@ -15,8 +15,25 @@ cellDivs.forEach(element => {
         const selectedCol = selectedCell.dataset.col
 
         if (gameboard[selectedRow][selectedCol] == '_') {
-            selectedCell.innerText = 'o'
+            selectedCell.innerText = 'x'
             gameboard[selectedRow][selectedCol] = 'x'
+
+            //ai Horizontal
+
+            if (gameboard[0][0] == 'x') {
+                document.getElementById('10').innerText = 'o';
+            }
+            if (gameboard[0][1] == 'x') {
+                document.getElementById('11').innerText = 'o';
+            }
+            if (gameboard[2][2] == 'x') {
+                document.getElementById('12').innerText = 'o';
+            }
+
+            //ai Vertigal
+
+
+            //ai Diagonal
 
             //Horizontal
 
@@ -76,7 +93,6 @@ cellDivs.forEach(element => {
             if (gameboard[0][2] == 'o' && gameboard[1][1] == 'o' && gameboard[2][0] == 'o') {
                 console.log('winner')
             }
-            console.log(gameboard)
         }
     })
 });
