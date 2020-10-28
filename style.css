@@ -18,7 +18,7 @@ section {
 .cell {
     width: 1em;
     height: 1em;
-    color: black;
+    color: rgb(109, 109, 62);
     border: 1px solid slategrey;
     font-size: 10em;
     text-align: center;

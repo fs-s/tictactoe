@@ -19,11 +19,31 @@ cellDivs.forEach(element => {
             gameboard[selectedRow][selectedCol] = 'x'
 
             //ai Horizontal
-
+            //esimene rida
             if (gameboard[0][0] == 'x') {
                 document.getElementById('10').innerText = 'o';
             }
             if (gameboard[0][1] == 'x') {
+                document.getElementById('11').innerText = 'o';
+            }
+            if (gameboard[0][2] == 'x') {
+                document.getElementById('12').innerText = 'o';
+            }
+            //teine rida
+            if (gameboard[1][0] == 'x') {
+                document.getElementById('20').innerText = 'o';
+            }
+            if (gameboard[1][1] == 'x') {
+                document.getElementById('21').innerText = 'o';
+            }
+            if (gameboard[1][2] == 'x') {
+                document.getElementById('22').innerText = 'o';
+            }
+            //kolmas rida
+            if (gameboard[2][0] == 'x') {
+                document.getElementById('10').innerText = 'o';
+            }
+            if (gameboard[2][1] == 'x') {
                 document.getElementById('11').innerText = 'o';
             }
             if (gameboard[2][2] == 'x') {
@@ -34,6 +54,7 @@ cellDivs.forEach(element => {
 
 
             //ai Diagonal
+
 
             //Horizontal
 
@@ -96,3 +117,9 @@ cellDivs.forEach(element => {
         }
     })
 });
+
+function EmtyCell(){
+    return Math.floor(Math.random() * 3);
+
+}
+console.log(EmtyCell(3));
