@@ -119,7 +119,15 @@ cellDivs.forEach(element => {
 });
 
 function EmtyCell(){
-    return Math.floor(Math.random() * 3);
+ x = Math.floor(Math.random() * 3);
+ y = Math.floor(Math.random() * 3);
 
+ do{
+     x = 0 - 2
+     y = 0 - 2
+ } while (gameboard[x][y]);
+    return[x,y]
+
+    
 }
 console.log(EmtyCell(3));
